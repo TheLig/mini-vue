@@ -1,5 +1,8 @@
 
-
-export function add (a:number, b:number) {
-  return a + b
+interface Person {
+  age: number
 }
+
+export function effect (user: Person) {}
+
+export function reactive (user: Person) {}

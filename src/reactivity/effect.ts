@@ -1,23 +1,16 @@
-
 class ReactiveEffect {
-
   private _fn: any
-
   constructor(fn) {
     this._fn = fn
   }
-
   run() {
     activeEffect = this
     this._fn()
   }
-
 }
 
 const targetMap = new Map()
-
 export function track(target, key) {
-
   let depsMap = targetMap.get(target)
   if (!depsMap) {
     depsMap = new Map()
@@ -42,11 +35,6 @@ export function trigger(target, key) {
 
 let activeEffect
 export function effect(fn) {
-
   const _effect = new ReactiveEffect(fn)
-
   _effect.run()
-
 }
-
-

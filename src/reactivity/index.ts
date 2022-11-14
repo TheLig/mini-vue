@@ -1,8 +1,7 @@
-
 interface Person {
-  age: number
+  age: number;
 }
 
-export function effect (user: Person) {}
+export function effect(user: Person) {}
 
-export function reactive (user: Person) {}
+export function reactive(user: Person) {}
